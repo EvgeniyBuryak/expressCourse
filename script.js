@@ -1,19 +1,19 @@
 // Вариант 1 
-let sum1 = (a, b, c) => a + b + c;
+const sum1 = (a, b, c) => a + b + c;
 
 alert(sum1(5, 10, 3)); //18
 
 // Вариант 2  
-let sum2 = (a) => (b) => (c) => a + b + c;
+const sum2 = (a) => (b) => (c) => a + b + c;
 
 alert(sum2(5)(10)(3)); //18
 
 // Вариант 3 
-let sum3 = (a) => (b) => (c) => {
+const sum3 = (a) => (b) => (c) => {
 
     let current = a + b + c;
 
-    let func = (d) => {
+    const func = (d) => {
         current += d;
         return func;
     };
@@ -32,11 +32,11 @@ sum3(5)(10)(3).add(4).result().add(9).add(10).result(); // 22 and 41
 
 // Вариант 4 
 
-let sum = (a) => (b) => (c) => {
+const sum = (a) => (b) => (c) => {
 
     let current = a + b + c;
 
-    let func = (d) => {
+    const func = (d) => {
         current += d;
         return func;
     };
